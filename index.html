@@ -35,11 +35,11 @@
                 </nav>
                 <ul class="auth-nav">
                     <li class="item">
-                        <a class="link" href="mailto:info@devstudio.com"><svg class="icon" height="12" width="16">
+                        <a class="link" href="mailto:info@devstudio.com"><svg class="icon-n" height="12" width="16">
                                 <use href="./images/icons.svg#icon-envelope"></use>
                             </svg>info@devstudio.com</a>
                     </li>
-                    <li class="item"><a class="link" href="tel:+380961111111"><svg class="icon" height="16" width="10">
+                    <li class="item"><a class="link" href="tel:+380961111111"><svg class="icon-n" height="16" width="10">
                                 <use href="./images/icons.svg#icon-smartphone"></use>
                             </svg>+38 096 111 11 11</a></li>
                 </ul>
@@ -49,7 +49,63 @@
 
         <section class="slogan">
             <h1 class="slogan-title">Ефективні рішення для <br />вашого бізнесу</h1>
-            <button type="button" class="button-primary">Замовити послугу</button>
+            <button type="button" class="button-primary" data-modal-open>Замовити послугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal__button-close" data-modal-close>
+                        <svg class="svg-close">
+                            <use href="./images/sprite.svg#svg-close"></use>
+                        </svg>
+                    </button>
+                    <form class="js-speaker-form form">
+                        <h2 class="modal__topic">
+                            Залиште свої дані, ми вам передзвонимо
+                        </h2>
+                        <label class="form-field">
+                            <input type="text" name="name" class="form-input" placeholder=" " />
+            
+                            <span class="form-label">Ім'я</span>
+                            <svg class="svg-modal">
+                                <use href="./images/sprite.svg#modal-person"></use>
+                            </svg>
+                        </label>
+            
+                        <label class="form-field">
+                            <input type="tel" name="tel" class="form-input" placeholder=" " />
+            
+                            <span class="form-label">Телефон</span>
+                            <svg class="svg-modal">
+                                <use href="./images/sprite.svg#modal-phone"></use>
+                            </svg>
+                        </label>
+            
+                        <label class="form-field">
+                            <input type="email" name="mail" class="form-input" placeholder=" " />
+            
+                            <span class="form-label">Пошта</span>
+                            <svg class="svg-modal">
+                                <use href="./images/sprite.svg#modal-email"></use>
+                            </svg>
+                        </label>
+            
+                        <label class="form-field">
+                            <textarea class="form-input form-input--comment" name="comment" placeholder=" "></textarea>
+                            <span class="form-label--comment">Коментар</span>
+                        </label>
+            
+                        <label class="form-field-checkbox">
+                            <input class="checkbox" type="checkbox" name="topic" value="check" />
+                            <span class="icon"></span>
+                            <p class="checkbox-text">
+                                Погоджуюся з розсилкою та приймаю
+                                <a href="" class="checkbox-link">Умови договору</a>
+                            </p>
+                        </label>
+            
+                        <button class="modal__button-send">Відправити</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <section class="features section">
@@ -58,9 +114,9 @@
                 <ul class="features-list">
                     <li class="item">
                         <div class="thumb">
-                            <svg class="icon" height="70" width="70">
-                                <use href="./images/icons.svg#icon-antenna"></use>
-                            </svg>
+                        <svg class="icon-p"  height="70" width="70">
+                            <use href="./images/sprite.svg#icon-sputnik"></use>
+                        </svg>
                         </div>
                         <h3 class="section-item-one">УВАГА ДО ДЕТАЛЕЙ</h3>
                         <p class="section-text">Ідейні міркування, і навіть початок повсякденної роботи з формування
@@ -69,7 +125,7 @@
 
                     <li class="item">
                         <div class="thumb">
-                            <svg class="icon" height="70" width="70">
+                            <svg class="icon-p" height="70" width="70">
                                 <use href="./images/icons.svg#icon-clock"></use>
                             </svg>
                         </div>
@@ -80,7 +136,7 @@
                     </li>
                     <li class="item">
                         <div class="thumb">
-                            <svg class="icon" height="70" width="70">
+                            <svg class="icon-p" height="70" width="70">
                                 <use href="./images/icons.svg#icon-diagram"></use>
                             </svg>
                         </div>
@@ -89,7 +145,7 @@
                     </li>
                     <li class="item">
                         <div class="thumb">
-                            <svg class="icon" height="70" width="70">
+                            <svg class="icon-p" height="70" width="70">
                                 <use href="./images/icons.svg#icon-astronaut"></use>
                             </svg>
                         </div>
@@ -374,6 +430,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
